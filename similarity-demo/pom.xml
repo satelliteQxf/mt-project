@@ -40,7 +40,13 @@
 
 <dependency>
 <groupId>org.dkpro.similarity</groupId>
+<artifactId>dkpro-similarity-algorithms-lsr-gpl</artifactId>
+</dependency>
+
+<dependency>
+<groupId>org.dkpro.similarity</groupId>
 <artifactId>dkpro-similarity-algorithms-lexical-asl</artifactId>
 </dependency>
 </dependencies>
+
 </project>
