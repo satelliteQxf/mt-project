@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mtproject</groupId>
+  <artifactId>similarity-demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <repositories>
+<repository>
+<id>ukp-oss-releases</id>
+<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
+</repository>
+<repository>
+<id>ukp-oss-snapshots</id>
+<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-snapshots</url>
+</repository>
+</repositories>
+  
+  
+  <properties>
+  <dkpro.similarity.version>2.2.0</dkpro.similarity.version>
+</properties>
+
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.dkpro.similarity</groupId>
+      <artifactId>dkpro-similarity-uima-core-asl</artifactId>
+      <version>${dkpro.similarity.version}</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+<dependency>
+<groupId>org.dkpro.similarity</groupId>
+<artifactId>dkpro-similarity-algorithms-api-asl</artifactId>
+</dependency>
+
+<dependency>
+<groupId>org.dkpro.similarity</groupId>
+<artifactId>dkpro-similarity-algorithms-lexical-asl</artifactId>
+</dependency>
+</dependencies>
+</project>
