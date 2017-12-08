@@ -1,3 +1,8 @@
+# this code is based on the tutorial
+# from the website
+# nlpforhackers.io/wordnet-sentence-similarity/ 
+
+
 from nltk import word_tokenize, pos_tag
 from nltk.corpus import wordnet as wn
 
@@ -61,8 +66,11 @@ def sentence_similarity(sentence1, sentence2):
 				count += 1
 
 	# Average the values
-	score /= count
-	return score
+	if count == 0:
+		return 0
+	else:
+		score /= count
+		return score
 
 def symmetric_sentence_similarity(sentence1, sentence2):
 	return (sentence_similarity(sentence1, sentence2) + sentence_similarity(sentence2, sentence1)) / 2
